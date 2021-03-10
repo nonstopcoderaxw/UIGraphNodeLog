@@ -9,9 +9,9 @@ git clone https://github.com/AlexTheCodeMan/UIGraphNodeLog
 ```bash
 cd /var/lib/docker/containers/
 ```
-3. Under the repo folder sync the contain folder with "logFolder"
-```bash
-rsync -avu --delete "/var/lib/docker/containers/{fullDockerContainerID}" "./logFolder"
+3. Update index.js logFileLocation variable to the docker log file location
+```js
+const logFileLocation = "/var/lib/docker/containers/679c4dc2ec97de1e51f419c24f42a7dfbd7973560f09f256311ace337a2ae6a4/679c4dc2ec97de1e51f419c24f42a7dfbd7973560f09f256311ace337a2ae6a4-json.log"
 ```
 4. Start the express server
 ```bash
